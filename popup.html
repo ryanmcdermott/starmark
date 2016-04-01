@@ -2,12 +2,13 @@
 <html>
   <head>
     <title>Starmark</title>
-    <script src="popup.js"></script>
     <link rel="stylesheet" href="style.css"/>
   </head>
   <body>
     <h1>Starmark</h1>
-
+    <div id="spinner" class="hidden">
+      <img src="loading.gif"/>
+    </div>
     <form id="sync-form">
      <div class="form-group">
        <label for="github-username">GitHub Username</label>
@@ -15,5 +16,6 @@
      </div>
      <button id="sync-button" type="submit" class="btn btn-default">Sync Stars</button>
     </form>
+    <script src="popup.js"></script>
   </body>
 </html>

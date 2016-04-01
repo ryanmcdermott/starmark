@@ -19,5 +19,6 @@
       ],
       "js": ["content.js"]
     }
-  ]
+  ],
+  "permissions": ["bookmarks"]
 }
