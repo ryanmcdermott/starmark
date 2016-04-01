@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+  "name": "Starmark",
+  "version": "0.1",
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon-16.png",
+    "default_title": "Starmark"
+   },
+   "icons": {
+      "128": "icon-128.png",
+      "16": "icon-16.png",
+      "48": "icon-48.png"
+   },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": ["content.js"]
+    }
+  ]
+}
