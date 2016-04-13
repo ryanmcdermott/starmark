@@ -30,10 +30,14 @@ function downloadStars(folderId, username) {
     })
     .then((json) => {
       json.forEach((star) => {
-        chrome.bookmarks.create({
-          parentId: folderId,
-          title: star.description,
-          url: star.url
+        chrome.bookmarks.search({url: star.html_url}, function (bookmarks) {
+          if (!bookmarks.length) {
+            chrome.bookmarks.create({
+              parentId: folderId,
+              title: star.description,
+              url: star.html_url
+            });
+          }
         });
       });
 
