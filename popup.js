@@ -11,11 +11,11 @@ syncButton.addEventListener('click', function (e) {
 
     if (starsFolder.length === 0) {
       chrome.bookmarks.create({parentId: '1', title: 'github-stars'}, (node) => {
-        downloadStars(node, username);
+        downloadStars(node.id, username);
       });
     }
     else {
-      downloadStars(starsFolder, username);
+      downloadStars(starsFolder[0].id, username);
     }
   });
 
@@ -23,13 +23,20 @@ syncButton.addEventListener('click', function (e) {
   e.preventDefault();
 });
 
-function downloadStars(folder, username) {
+function downloadStars(folderId, username) {
   function download(page) {
     fetch(`https://api.github.com/users/${username}/starred?page=${page}`).then((response) => {
       return response.json();
     })
     .then((json) => {
-      console.log(json);
+      json.forEach((star) => {
+        chrome.bookmarks.create({
+          parentId: folderId,
+          title: star.description,
+          url: star.url
+        });
+      });
+
       if(json.length) {
         download(page + 1);
       }
