@@ -4,10 +4,11 @@ Starmark is a Chrome extension that converts the repos you've starred on GitHub 
 
 
 ## Example
+![starmark](screenshot.png)
 
-[INSERT_VIDEO_OR_IMAGE]
+
+[https://www.youtube.com/watch?v=gz-IhyXYNm8](https://www.youtube.com/watch?v=gz-IhyXYNm8)
 
 
 ## Installation
-
-[INSERT_EXTENSION_URL_HERE]
+https://chrome.google.com/webstore/detail/starmark/bkobkbkmhkmlmdolbhnmmmhnccdgaebk
