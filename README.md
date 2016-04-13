@@ -11,4 +11,4 @@ Starmark is a Chrome extension that converts the repos you've starred on GitHub 
 
 
 ## Installation
-https://chrome.google.com/webstore/detail/starmark/bkobkbkmhkmlmdolbhnmmmhnccdgaebk
+[https://chrome.google.com/webstore/detail/starmark/bkobkbkmhkmlmdolbhnmmmhnccdgaebk](https://chrome.google.com/webstore/detail/starmark/bkobkbkmhkmlmdolbhnmmmhnccdgaebk)
